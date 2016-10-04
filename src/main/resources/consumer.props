@@ -1,4 +1,4 @@
-bootstrap.servers=rk1.hdp:6667
+bootstrap.servers=k1.hdp.local:6667
 group.id=test
 enable.auto.commit=true
 key.deserializer=org.apache.kafka.common.serialization.StringDeserializer
