@@ -24,7 +24,7 @@ import java.util.Properties;
  * -Djava.security.krb5.conf=/etc/krb5.conf \
  * -Djavax.security.auth.useSubjectCredsOnly=true \
  * -cp KafkaClientsTest-jar-with-dependencies.jar \
- * MyProducerSecure rk1.hdp:6667 <topic>
+ * MyProducerSecure  <topic>
  *
  */
 public class MyProducerSecure {
