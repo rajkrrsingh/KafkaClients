@@ -46,10 +46,13 @@ public class MyProducerSecure {
         }
 
         try {
-            for (int i = 0; i < 100; i++) {
+            int i=0;
+            while (true) {
                 //ProducerRecord<String, String> record = new ProducerRecord<>(args[0], "value-" + i);
                 ProducerRecord<String, String> record = new ProducerRecord<String, String>(args[0],"key-"+i,"value-"+i);
                 producer.send(record);
+                i++;
+                Thread.sleep(30000);
             }
         } catch (Throwable throwable) {
             System.out.printf("%s", throwable.getStackTrace());

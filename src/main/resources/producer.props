@@ -1,4 +1,4 @@
-bootstrap.servers=k1.hdp.local:6667
+bootstrap.servers=rksnode:6667
 acks=all
 retries=0
 batch.size=16384
