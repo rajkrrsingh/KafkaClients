@@ -1,9 +1,12 @@
-bootstrap.servers=rksnode:6667
-acks=all
+bootstrap.servers=hdp26:6667
+acks=1
 retries=0
-batch.size=16384
+#batch.size=100000
 auto.commit.interval.ms=1000
-linger.ms=0
+#linger.ms=100
 key.serializer=org.apache.kafka.common.serialization.StringSerializer
 value.serializer=org.apache.kafka.common.serialization.StringSerializer
 block.on.buffer.full=true
+//
+##security.protocol=PLAINTEXTSASL
+##sasl.mechanism=PLAIN

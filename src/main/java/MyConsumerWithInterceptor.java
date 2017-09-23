@@ -1,4 +1,5 @@
 import com.google.common.io.Resources;
+import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
@@ -11,12 +12,12 @@ import java.util.Properties;
 import java.util.Random;
 
 
-public class MyConsumer {
-    final static Logger logger = Logger.getLogger(MyConsumer.class);
+public class MyConsumerWithInterceptor {
+    final static Logger logger = Logger.getLogger(MyConsumerWithInterceptor.class);
 
     public static void main(String[] args) throws Exception {
         if(args.length<1){
-            System.out.println("usage : java -cp <>.jar <topic1> <topic2> ..");
+            System.out.println("usage : java -cp <>.jar MyConsumerWithInterceptor <topic1> <topic2> ..");
             System.exit(-1);
         }
 
@@ -29,6 +30,7 @@ public class MyConsumer {
         try (InputStream props = Resources.getResource("consumer.props").openStream()) {
             Properties properties = new Properties();
             properties.load(props);
+            properties.put(ConsumerConfig.INTERCEPTOR_CLASSES_CONFIG,MyConsumerInterceptor.class.getName());
             if (properties.getProperty("group.id") == null) {
                 properties.setProperty("group.id", "group-" + new Random().nextInt(100000));
             }
@@ -47,7 +49,7 @@ public class MyConsumer {
                         +record.offset()+","+record.key()+","+record.value());
             }
             logger.info("[Thread: "+Thread.currentThread().getName()+"] | [method: "+Thread.currentThread().getStackTrace()[1].getMethodName()+" ] | sleeping for : "+10000);
-            Thread.sleep(10000);
+            Thread.sleep(1000);
             logger.info("[Thread: "+Thread.currentThread().getName()+"] | [method: "+Thread.currentThread().getStackTrace()[1].getMethodName()+" ] | wake up");
         }
     }
