@@ -1,4 +1,4 @@
-# KerberosClient
+# KafkaClients
 ### Build
 ```
 mvn clean package
