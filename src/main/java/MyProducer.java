@@ -33,7 +33,8 @@ public class MyProducer {
                 ProducerRecord<String, String> record = new ProducerRecord<String, String>(args[0],"key-"+i,"value-"+i);
                 producer.send(record);
                 i++;
-                //Thread.sleep(1000);
+                logger.info("[Thread: "+Thread.currentThread().getName()+"] | [method: "+Thread.currentThread().getStackTrace()[1].getMethodName()+" ] | send "+record);
+                Thread.sleep(100);
             }
         } catch (Throwable throwable) {
             System.out.printf("%s", throwable.getStackTrace());

@@ -1,17 +1,6 @@
-import com.google.common.io.Resources;
-import org.apache.kafka.clients.consumer.*;
-import org.apache.kafka.common.Metric;
-import org.apache.kafka.common.MetricName;
-import org.apache.kafka.common.PartitionInfo;
-import org.apache.kafka.common.TopicPartition;
-import org.apache.kafka.common.metrics.KafkaMetric;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.io.InputStream;
-import java.util.*;
-
 public class KafkaConsumerApiDemo {
+
+/*
     private static final Logger logger = LoggerFactory.getLogger(KafkaConsumerApiDemo.class);
 
 
@@ -167,5 +156,6 @@ public class KafkaConsumerApiDemo {
             }
         }
     }
+*/
 
 }

@@ -65,7 +65,7 @@ public class MyProducerWithCallBack {
         @Override
         public void onCompletion(RecordMetadata metadata, Exception exception) {
             logger.info("callback complete for topic "+topic+" : "+"for key "+key+" : value "+value+" : "+ (System.nanoTime()-start));
-            //logger.info("metadata :"+metadata.topic()+metadata.offset()+metadata.partition());
+            logger.info("metadata topic :"+metadata.topic()+" offset : "+metadata.offset()+" "+metadata.partition());
         }
     }
 }

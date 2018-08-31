@@ -47,7 +47,7 @@ public class MyConsumer {
                         +record.offset()+","+record.key()+","+record.value());
             }
             logger.info("[Thread: "+Thread.currentThread().getName()+"] | [method: "+Thread.currentThread().getStackTrace()[1].getMethodName()+" ] | sleeping for : "+10000);
-            Thread.sleep(10000);
+            Thread.sleep(1000);
             logger.info("[Thread: "+Thread.currentThread().getName()+"] | [method: "+Thread.currentThread().getStackTrace()[1].getMethodName()+" ] | wake up");
         }
     }
