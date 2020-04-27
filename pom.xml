@@ -6,14 +6,18 @@
     <artifactId>KafkaClientsTest</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
-        <kafka-clients.version>1.0.0.3.1.2.0-7</kafka-clients.version>
-        <kafka-core.version>1.0.0.3.1.2.0-7</kafka-core.version>
+        <kafka-clients.version>2.3.0.7.0.3.0-79</kafka-clients.version>
+        <kafka-core.version>2.3.0.7.0.3.0-79</kafka-core.version>
         <scala.version>2.11</scala.version>
     </properties>
     <repositories>
-        <repository>
+        <!--<repository>
             <id>public</id>
             <url>http://nexus-private.hortonworks.com/nexus/content/groups/public</url>
+        </repository>-->
+        <repository>
+            <id>cloudera</id>
+            <url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
         </repository>
     </repositories>
 

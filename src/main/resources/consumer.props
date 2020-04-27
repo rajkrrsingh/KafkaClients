@@ -1,6 +1,6 @@
-bootstrap.servers=rk253:6667
-group.id=test2
-client.id=client2
+bootstrap.servers=c215-node4:9092
+#group.id=test3
+client.id=client3
 enable.auto.commit=true
 key.deserializer=org.apache.kafka.common.serialization.StringDeserializer
 value.deserializer=org.apache.kafka.common.serialization.StringDeserializer

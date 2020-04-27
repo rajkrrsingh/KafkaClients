@@ -1,4 +1,4 @@
-bootstrap.servers=c115-node2.hdp.local:6667
+bootstrap.servers=c215-node4:9092
 acks=1
 retries=3
 compression.type=gzip
